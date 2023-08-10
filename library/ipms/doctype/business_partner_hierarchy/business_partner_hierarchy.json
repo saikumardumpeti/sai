@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 15:07:24.159198",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_business_partner",
+  "from_bp",
+  "type_from",
+  "to_business_partner",
+  "to_bp",
+  "type_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_business_partner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Business Partner",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "from_business_partner.customer_name",
+   "fieldname": "from_bp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From BP"
+  },
+  {
+   "fieldname": "type_from",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type From",
+   "options": "\nis Subsidiary\nis Parent\nis Related to"
+  },
+  {
+   "fieldname": "to_business_partner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Business Partner",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "to_business_partner.customer_name",
+   "fieldname": "to_bp",
+   "fieldtype": "Data",
+   "label": "To BP"
+  },
+  {
+   "fieldname": "type_to",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type To",
+   "options": "\nis Subsidiary\nis Parent\nis Related to"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 15:07:24.159198",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Business Partner Hierarchy",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

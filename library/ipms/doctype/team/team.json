@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 15:08:12.740875",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "members_cb",
+  "team_member",
+  "access_levels_section",
+  "read",
+  "write"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Role Visibility",
+   "reqd": 1
+  },
+  {
+   "fieldname": "members_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "fieldname": "team_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Team Member",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "access_levels_section",
+   "fieldtype": "Section Break",
+   "label": "Access Levels"
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "fieldname": "read",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Read"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "write",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Write"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 15:08:12.740875",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Team",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

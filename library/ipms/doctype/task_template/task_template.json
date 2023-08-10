@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "autoname": "field:template_name",
+ "creation": "2023-06-16 16:10:53.198823",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "property_right",
+  "jurisdiction",
+  "proceedings",
+  "authority",
+  "details_cb",
+  "case_type",
+  "property_right_name",
+  "jurisdiction_name",
+  "proceedings_name",
+  "authority_name",
+  "tasks_sb",
+  "tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.case_type",
+   "fieldname": "property_right",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Property Right",
+   "options": "Property Right",
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.property_right",
+   "fieldname": "jurisdiction",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jurisdiction",
+   "options": "Jurisdiction",
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.jurisdiction",
+   "fieldname": "proceedings",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Proceedings",
+   "options": "Proceedings",
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.proceedings",
+   "fieldname": "authority",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Authority",
+   "options": "Authority",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "details_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Case Type",
+   "options": "Case Type",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval: doc.property_right && doc.property_right_name && doc.case_type",
+   "fetch_from": "property_right.property_right_name",
+   "fieldname": "property_right_name",
+   "fieldtype": "Data",
+   "label": "Property Right Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.jurisdiction_name && doc.jurisdiction && doc.property_right",
+   "fetch_from": "jurisdiction.jurisdiction_name",
+   "fieldname": "jurisdiction_name",
+   "fieldtype": "Data",
+   "label": "Jurisdiction Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.proceedings && doc.proceedings_name && doc.jurisdiction",
+   "fetch_from": "proceedings.proceedings_name",
+   "fieldname": "proceedings_name",
+   "fieldtype": "Data",
+   "label": "Proceedings Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.authority && doc.authority_name && doc.authority",
+   "fetch_from": "authority.authority_name",
+   "fieldname": "authority_name",
+   "fieldtype": "Data",
+   "label": "Authority Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tasks_sb",
+   "fieldtype": "Section Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "options": "Task Template Item",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-16 16:10:53.198823",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Task Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

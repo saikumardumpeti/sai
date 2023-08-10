@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 14:57:32.628290",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contact_role",
+  "contact_person",
+  "party",
+  "correspondence_language",
+  "contact_separator",
+  "case_id",
+  "phone",
+  "email"
+ ],
+ "fields": [
+  {
+   "fieldname": "contact_role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Role Visibility",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contact",
+   "options": "Contact",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "contact_person.party",
+   "fieldname": "party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Party",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_person.correspondence_language",
+   "fieldname": "correspondence_language",
+   "fieldtype": "Data",
+   "label": "Language",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_separator",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "case_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Case ID"
+  },
+  {
+   "fetch_from": "contact_person.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_person.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 14:57:32.628290",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Contact Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

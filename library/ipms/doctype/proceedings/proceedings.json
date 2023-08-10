@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "autoname": "PC-.#####",
+ "creation": "2023-06-16 14:43:19.404142",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "case_type",
+  "section_break_2",
+  "property_right",
+  "jurisdiction",
+  "names_cb",
+  "property_right_name",
+  "jurisdiction_name",
+  "proceedings_name",
+  "default_templates_sb",
+  "date_type_template",
+  "column_break_11",
+  "case_payment_template",
+  "column_break_13",
+  "document_submission_template",
+  "available_fields_within_a_case_section",
+  "case_fields"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Case Type",
+   "options": "Case Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "property_right",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Property Right",
+   "options": "Property Right",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "jurisdiction",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Jurisdiction",
+   "options": "Jurisdiction",
+   "reqd": 1
+  },
+  {
+   "fieldname": "names_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "property_right.property_right_name",
+   "fieldname": "property_right_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Property Right"
+  },
+  {
+   "fetch_from": "jurisdiction.jurisdiction_name",
+   "fetch_if_empty": 1,
+   "fieldname": "jurisdiction_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Jurisdiction"
+  },
+  {
+   "fieldname": "proceedings_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Proceedings Name",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_templates_sb",
+   "fieldtype": "Section Break",
+   "label": "Default Templates"
+  },
+  {
+   "fieldname": "date_type_template",
+   "fieldtype": "Link",
+   "label": "Date Type Template",
+   "options": "Date Type Template"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "case_payment_template",
+   "fieldtype": "Link",
+   "label": "Case Payment Template",
+   "options": "Case Payment Template"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_submission_template",
+   "fieldtype": "Link",
+   "label": "Document Submission Template",
+   "options": "Document Submission Template"
+  },
+  {
+   "fieldname": "available_fields_within_a_case_section",
+   "fieldtype": "Section Break",
+   "label": "Available fields within a Case"
+  },
+  {
+   "fieldname": "case_fields",
+   "fieldtype": "Table",
+   "label": "Case Fields",
+   "options": "Proceeding Case Field"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-16 14:43:19.404142",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Proceedings",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "proceedings_name",
+ "track_changes": 1
+}

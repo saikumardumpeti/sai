@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "autoname": "AU-.#####",
+ "creation": "2023-06-16 16:14:16.478510",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "case_type",
+  "sb_2",
+  "property_right",
+  "jurisdiction",
+  "proceedings",
+  "names_sb",
+  "property_right_name",
+  "jurisdiction_name",
+  "proceedings_name",
+  "authority_name"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Case Type",
+   "options": "Case Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "property_right",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Property Right",
+   "options": "Property Right",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "jurisdiction",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Jurisdiction",
+   "options": "Jurisdiction",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "proceedings",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Proceedings",
+   "options": "Proceedings",
+   "reqd": 1
+  },
+  {
+   "fieldname": "names_sb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "property_right.property_right_name",
+   "fieldname": "property_right_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Property Right"
+  },
+  {
+   "fetch_from": "jurisdiction.jurisdiction_name",
+   "fieldname": "jurisdiction_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Jurisdiction"
+  },
+  {
+   "fetch_from": "proceedings.proceedings_name",
+   "fieldname": "proceedings_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Proceedings"
+  },
+  {
+   "fieldname": "authority_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Authority Name",
+   "no_copy": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-16 16:14:16.478510",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Authority",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "authority_name",
+ "track_changes": 1
+}

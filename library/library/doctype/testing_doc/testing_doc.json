@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-28 15:38:39.406826",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e"
+ ],
+ "fields": [
+  {
+   "fieldname": "a",
+   "fieldtype": "Data",
+   "label": "a"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "b"
+  },
+  {
+   "fieldname": "c",
+   "fieldtype": "Data",
+   "label": "c"
+  },
+  {
+   "fieldname": "d",
+   "fieldtype": "Data",
+   "label": "d"
+  },
+  {
+   "depends_on": "a",
+   "fieldname": "e",
+   "fieldtype": "Data",
+   "label": "e"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-28 15:38:47.704622",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "testing doc",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

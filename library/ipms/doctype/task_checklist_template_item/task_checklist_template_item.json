@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 14:52:25.140366",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "checklist_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "checklist_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Checklist Name"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 14:52:25.140366",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Task Checklist Template Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

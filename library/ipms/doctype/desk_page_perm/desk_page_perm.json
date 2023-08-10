@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "autoname": "field:desk_page",
+ "creation": "2023-06-16 15:16:51.375695",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "desk_page",
+  "pemissions_section",
+  "visible_to_roles",
+  "column_break_4",
+  "hidden_to_roles"
+ ],
+ "fields": [
+  {
+   "fieldname": "desk_page",
+   "fieldtype": "Link",
+   "label": "Workspace",
+   "options": "Workspace",
+   "unique": 1
+  },
+  {
+   "fieldname": "pemissions_section",
+   "fieldtype": "Section Break",
+   "label": "Pemissions"
+  },
+  {
+   "fieldname": "visible_to_roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Visible To Roles",
+   "options": "Role Link"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hidden_to_roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Hidden To Roles",
+   "options": "Role Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-16 15:16:51.375695",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Desk Page Perm",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "desk_page",
+ "track_changes": 1
+}

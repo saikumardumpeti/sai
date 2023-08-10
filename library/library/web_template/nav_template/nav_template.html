@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="http://127.0.0.1:8002/app/home">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="search-li">
+        <input type="text" class="search-input" placeholder="Search">
+      </li>
+    </ul>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  margin-right: 10px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.search-input {
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.search-li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+</style>

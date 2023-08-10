@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 12:55:15.634145",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "field",
+  "field_type",
+  "column_break_3",
+  "visible",
+  "mandatory"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "field",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "field_type",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Field Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "visible",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Visible"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 12:55:15.634145",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Proceeding Case Field",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

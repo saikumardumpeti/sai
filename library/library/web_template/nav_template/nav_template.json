@@ -1,0 +1,17 @@
+{
+ "__islocal": true,
+ "__unsaved": 1,
+ "creation": "2023-07-04 15:30:11.807351",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [],
+ "idx": 0,
+ "modified": "2023-07-04 15:30:11.807351",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Nav Template",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Navbar"
+}

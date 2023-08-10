@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Hello.##",
+ "creation": "2023-06-20 10:31:15.310748",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "status",
+  "description",
+  "from_date",
+  "to_date",
+  "k",
+  "class",
+  "b",
+  "bb"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "first_name.first_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClose"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "k",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "K",
+   "options": "K",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Int",
+   "label": "Class"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Data",
+   "label": "a",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bb",
+   "fieldtype": "Data",
+   "label": "aa"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-06 14:37:45.905672",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Demotest",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

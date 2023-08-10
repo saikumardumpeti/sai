@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 15:00:55.580404",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_item",
+  "is_paid",
+  "payment_cb",
+  "paid_via",
+  "paid_on"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "payment_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Item",
+   "options": "Payment Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Paid"
+  },
+  {
+   "fieldname": "payment_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "paid_via",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Paid Via",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "paid_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Paid On",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 15:00:55.580404",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Payment Template Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

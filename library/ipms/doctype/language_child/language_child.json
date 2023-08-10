@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 14:37:58.986525",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "language"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Language",
+   "options": "Language"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 14:37:58.986525",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Language Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-17 11:20:53.711402",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "parent_doc_link",
+  "first_name",
+  "last_name",
+  "age",
+  "list_all_parent_doc_section",
+  "list_all_parent_doc",
+  "parent_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "parent_doc_link",
+   "fieldtype": "Link",
+   "label": "Parent Doc Link",
+   "options": "Parent Document"
+  },
+  {
+   "depends_on": "parent_doc_link",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "depends_on": "parent_doc_link",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "depends_on": "parent_doc_link",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "list_all_parent_doc",
+   "fieldtype": "Button",
+   "label": "List All Parent Doc"
+  },
+  {
+   "fieldname": "list_all_parent_doc_section",
+   "fieldtype": "Section Break",
+   "label": "List All Parent Doc"
+  },
+  {
+   "fieldname": "parent_list",
+   "fieldtype": "Table",
+   "label": "Parent List",
+   "options": "Parent List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-17 12:03:02.158944",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Child Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

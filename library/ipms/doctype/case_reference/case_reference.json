@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "creation": "2023-06-16 12:56:44.217742",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "case",
+  "catch_word",
+  "reference_cb",
+  "case_type",
+  "process_step",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Case",
+   "options": "Case",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "case.catch_word",
+   "fieldname": "catch_word",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Catch Word"
+  },
+  {
+   "fieldname": "reference_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "case.case_type",
+   "fieldname": "case_type",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Case Type"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "case.process_step",
+   "fieldname": "process_step",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Process Step"
+  },
+  {
+   "columns": 2,
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Comment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-16 12:56:44.217742",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Case Reference",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

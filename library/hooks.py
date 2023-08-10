@@ -11,8 +11,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/library/css/library.css"
-# app_include_js = "/assets/library/js/library.js"
+app_include_css = "/assets/library/css/library.css"
+app_include_js = "/assets/library/js/library.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/library/css/library.css"
@@ -29,7 +29,12 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Therapy Type" : "public/js/doctype.js", 
+             "Therapy Session": "public/js/sesion.js",
+             "Project": "public/js/plan.js",
+             "Therapy Plan": "public/js/therapyplan.js",
+             "User": "public/js/user.js",}
+# doctype_js = {"Timesheet" : "public/js/tmesheet.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -139,11 +144,12 @@ app_license = "MIT"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "library.event.get_events"
-# }
+override_whitelisted_methods = {
+	"healthcare.healthcare.doctype.therapy_plan.therapy_plan.make_therapy_session": "library.library.doctype.overide.make_therapy_session"
+}
 #
-# each overriding function accepts a `data` argument;
+# each overriding function accepts a `data` argument; # doc = frappe.get_all('Demo Doc', as_list=True)
+    # print(doc)
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {

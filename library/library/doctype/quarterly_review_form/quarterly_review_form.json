@@ -1,0 +1,335 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-18 17:45:14.048205",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rec_id",
+  "related_assessment",
+  "section_break_alqan",
+  "select_reviewer",
+  "select_author",
+  "date",
+  "column_break_wuf42",
+  "select_client",
+  "column_break_hmk8r",
+  "select_program",
+  "section_break_zueyg",
+  "select_isp_date",
+  "review_period",
+  "review_was_conducted_in_consultationcoordination",
+  "review_was",
+  "describe_the_general_status_of_the_client",
+  "need_for_continuing_programservice",
+  "describe_significant_events",
+  "significant_events_positive_and_negative_and_stressors",
+  "are_there_any_changes_in_client_needs",
+  "are_there_any_changes_in_client_needs_yesno",
+  "are_there_any_revisions_to_the_isp",
+  "are_there_any_revisions_to_the_isp_yesno",
+  "client_reactioncoping_strategy",
+  "client_reaction_coping",
+  "list_current_medication",
+  "list_current_medication_reason",
+  "describe_health_and_safety",
+  "describe_health_and_saftey",
+  "based_on_recent_interview",
+  "baed_on_recent_interview",
+  "family_satisfaction",
+  "family_satisfaction_applicable",
+  "the_demographic_information",
+  "demographic_information",
+  "summery_of_existing",
+  "summery_of_existing_isp",
+  "describe_progress_for_each_individual_objective_section",
+  "review_progres",
+  "section_break_irba6",
+  "select_author_signature",
+  "column_break_csuar",
+  "select_client_signature",
+  "section_break_cjuux",
+  "author_signature_name",
+  "column_break_pgvhv",
+  "client_signature_name",
+  "section_break_gn8qj",
+  "author_signature",
+  "column_break_qqe7r",
+  "client_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "rec_id",
+   "fieldtype": "Data",
+   "label": "REC ID"
+  },
+  {
+   "fieldname": "related_assessment",
+   "fieldtype": "Data",
+   "label": "Related Assessment"
+  },
+  {
+   "fieldname": "select_reviewer",
+   "fieldtype": "Data",
+   "label": "Select Reviewer"
+  },
+  {
+   "fieldname": "select_author",
+   "fieldtype": "Data",
+   "label": "Select Author"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "select_client",
+   "fieldtype": "Data",
+   "label": "Select Client"
+  },
+  {
+   "fieldname": "select_program",
+   "fieldtype": "Data",
+   "label": "Select Program"
+  },
+  {
+   "fieldname": "select_isp_date",
+   "fieldtype": "Data",
+   "label": "Select ISP Date"
+  },
+  {
+   "fieldname": "review_period",
+   "fieldtype": "Int",
+   "label": "Review Period"
+  },
+  {
+   "fieldname": "review_was",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "describe_the_general_status_of_the_client",
+   "fieldtype": "Long Text",
+   "label": "Describe the general status of the client"
+  },
+  {
+   "fieldname": "need_for_continuing_programservice",
+   "fieldtype": "Long Text",
+   "label": "Need for continuing program/service"
+  },
+  {
+   "fieldname": "are_there_any_changes_in_client_needs_yesno",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "are_there_any_revisions_to_the_isp_yesno",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "client_reactioncoping_strategy",
+   "fieldtype": "HTML",
+   "label": "Client reaction/coping strategy",
+   "options": "<p>Client reaction/coping strategy:</p>"
+  },
+  {
+   "fieldname": "list_current_medication",
+   "fieldtype": "HTML",
+   "label": "List current medication",
+   "options": "<p>List current medication (Does Client understand risk, benefits, side effects and reason for medication?):</p>"
+  },
+  {
+   "fieldname": "significant_events_positive_and_negative_and_stressors",
+   "fieldtype": "Long Text",
+   "label": "Significant events (positive and negative) and stressors"
+  },
+  {
+   "fieldname": "review_was_conducted_in_consultationcoordination",
+   "fieldtype": "HTML",
+   "label": "Review was conducted in consultation/coordination",
+   "options": "<p>Review was conducted in consultation/coordination with the following: (include client, service providers, and significant others): Specify method (Face to Face, Phone, etc.);</p>"
+  },
+  {
+   "fieldname": "describe_significant_events",
+   "fieldtype": "HTML",
+   "label": "Describe significant events",
+   "options": "<p>Describe significant events (positive and negative) and stressors impacting the client over the past 3 months to include any change in client needs, ISP revisions and client reaction/coping strategy.</p>"
+  },
+  {
+   "fieldname": "are_there_any_changes_in_client_needs",
+   "fieldtype": "HTML",
+   "label": "Are there any changes in client needs",
+   "options": "<p>Are there any changes in client needs? Yes/No )if \"yes\" specify).</p>"
+  },
+  {
+   "fieldname": "are_there_any_revisions_to_the_isp",
+   "fieldtype": "HTML",
+   "label": "Are there any revisions to the ISP",
+   "options": "<p>Are there any revisions to the ISP? Yes/No (If \"yes\" specify):</p>"
+  },
+  {
+   "fieldname": "client_reaction_coping",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "list_current_medication_reason",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "describe_health_and_safety",
+   "fieldtype": "HTML",
+   "label": "Describe health and safety",
+   "options": "<p>Describe health and safety concerns identified during this quarter and how they are being addressed:</p>"
+  },
+  {
+   "fieldname": "describe_health_and_saftey",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "based_on_recent_interview",
+   "fieldtype": "HTML",
+   "label": "Based on recent interview",
+   "options": "<p>Based on recent interview/conversation, describe the client's/family's (as applicable) level of satisfaction with services and regarding services.</p>"
+  },
+  {
+   "fieldname": "baed_on_recent_interview",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "family_satisfaction",
+   "fieldtype": "HTML",
+   "label": "Family satisfaction ",
+   "options": "<p>Family satisfaction (if applicable):</p>"
+  },
+  {
+   "fieldname": "family_satisfaction_applicable",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "the_demographic_information",
+   "fieldtype": "HTML",
+   "label": "The demographic information ",
+   "options": "<p>The demographic information on the Face Sheet was reviewed with the client and there are no changes.</p>"
+  },
+  {
+   "fieldname": "demographic_information",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "summery_of_existing_isp",
+   "fieldtype": "Long Text"
+  },
+  {
+   "fieldname": "summery_of_existing",
+   "fieldtype": "HTML",
+   "options": "<p>Summery of Existing ISP: Brief description of the progress made during this period.</p>"
+  },
+  {
+   "fieldname": "describe_progress_for_each_individual_objective_section",
+   "fieldtype": "Section Break",
+   "label": "Describe progress for each individual objective"
+  },
+  {
+   "fieldname": "review_progres",
+   "fieldtype": "Long Text",
+   "label": "Review Progres"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_alqan",
+   "fieldtype": "Section Break",
+   "label": "Due Dates"
+  },
+  {
+   "fieldname": "column_break_wuf42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hmk8r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zueyg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "select_author_signature",
+   "fieldtype": "Data",
+   "label": "Select Author Signature"
+  },
+  {
+   "fieldname": "column_break_csuar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_client_signature",
+   "fieldtype": "Data",
+   "label": "Select Client Signature"
+  },
+  {
+   "fieldname": "section_break_cjuux",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "author_signature_name",
+   "fieldtype": "Data",
+   "label": "Author Signature Name"
+  },
+  {
+   "fieldname": "column_break_pgvhv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_signature_name",
+   "fieldtype": "Data",
+   "label": "Client Signature Name"
+  },
+  {
+   "fieldname": "section_break_gn8qj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "author_signature",
+   "fieldtype": "Signature",
+   "label": "Author Signature"
+  },
+  {
+   "fieldname": "column_break_qqe7r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_signature",
+   "fieldtype": "Signature",
+   "label": "Client Signature"
+  },
+  {
+   "fieldname": "section_break_irba6",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-19 12:11:03.998940",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Quarterly Review Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

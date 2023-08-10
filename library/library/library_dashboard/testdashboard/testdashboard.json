@@ -1,0 +1,41 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Hiring vs Attrition Count",
+   "width": "Half"
+  },
+  {
+   "chart": "Department Wise Employee Count",
+   "width": "Half"
+  },
+  {
+   "chart": "Department wise Timesheet Hours",
+   "width": "Half"
+  },
+  {
+   "chart": "Expense Claims",
+   "width": "Half"
+  },
+  {
+   "chart": "Shift Assignment Breakup",
+   "width": "Half"
+  },
+  {
+   "chart": "Hiring vs Attrition Count",
+   "width": "Half"
+  }
+ ],
+ "creation": "2023-06-30 15:38:47.689116",
+ "dashboard_name": "testdashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2023-06-30 15:40:19.986232",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "testdashboard",
+ "owner": "Administrator"
+}

@@ -1,0 +1,141 @@
+<!-- <style>
+    {% include "/public/css/theme_3.css" %}
+  </style>
+
+
+
+<nav class="topbar">
+    <div class="logo">
+      <a href = "/home"><img src="https://biiibo.com/assets/bellamar_website/theme3/images/biiiboOriginalLogoWhite63122257.png" alt="Logo"></a>
+    </div>
+    <div class="topbar-search">
+        <form class="search-form" >
+            <input id="searchMe2" name="search" type="text" placeholder="Search 'Lumber'" class="form-control input-search">
+            <button class="search-button" type="button" id="searchButton"></button>
+        </form>
+    </div>
+    <div class="spinner-overlay" style="display: none;">
+      <div class="spinner"></div>
+  </div>
+    <div class="select-section">
+      <select id="locationSelect">
+        <option value="All">All</option>
+          <option value="Seattle">Seattle</option>
+          <option value="Toronto">Toronto</option>
+          <option value="Vancouver">Vancouver</option>
+        </select>
+    </div>
+    <div class="topbar-login">
+        <a href="/login">
+            <div class="hello">Hello👋,</div>
+                    
+        <p class="login" >Login</p>
+
+        </a>
+        
+    </div>
+    <div class="shopping-cart">
+        <div class="cart-icon" style="display: inline;">
+            <a href="/cart" class="btn_cart_icon" style="padding-right:10px">
+            <span style="margin-right: 20px;" class="header-icons-noti badge-wrapper" id="cart-count">1</span>
+            <img src="http://167.99.148.15:82/assets/bellamar_website/images/cart_white.png" class="header-icon1" alt="ICON">
+            </a>
+        </div>
+    </div>
+  </nav>
+
+  <nav class="navbar">
+    <ul class="navbar-items">
+      <li class="navbar-item has-dropdown shop-all">
+        Shop all Departments
+        <ul class="dropdown-menu">
+          <li class="dropdown-item has-sub-dropdown">
+            Building Materials
+            <ul class="sub-dropdown-menu">
+                <li class="sub-dropdown-item">
+                    <a href="#"><span class="sub-dropdown-item-css">Builder's Hardware</span></a>
+                </li>
+                <li class="sub-dropdown-item">SEO</li>
+                <li class="sub-dropdown-item">Email Marketing</li>
+            </ul>
+        </li>
+            
+          <li class="dropdown-item">Graphic Design</li>
+          <li class="dropdown-item has-sub-dropdown">
+            Marketing
+            <ul class="sub-dropdown-menu">
+              <li class="sub-dropdown-item">Social Media</li>
+              <li class="sub-dropdown-item">SEO</li>
+              <li class="sub-dropdown-item">Email Marketing</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="navbar-item has-dropdown shop-all">
+        Shop By
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">Web Development</li>
+          <li class="dropdown-item">Graphic Design</li>
+          <li class="dropdown-item has-sub-dropdown">
+            Marketing
+            <ul class="sub-dropdown-menu">
+              <li class="sub-dropdown-item">Social Media</li>
+              <li class="sub-dropdown-item">SEO</li>
+              <li class="sub-dropdown-item">Email Marketing</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="aaab">
+        <div class="abc">
+            <p>Get FREE Same Day Deliveries With</p>
+            <img src="https://biiibo.com/assets/bellamar_website/theme3/images/biiiboOriginalLogoWhite63122257.png" class = "nav-item-image"/>
+            <button class="nav-item-pro-title">Learn More</button>
+        </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get all elements with the class "has-dropdown"
+  const dropdownItems = document.querySelectorAll(".has-dropdown");
+
+  // Attach a click event listener to each dropdown item
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", function() {
+      // Toggle the "active" class on the dropdown menu
+      const dropdownMenu = this.querySelector(".dropdown-menu");
+      dropdownMenu.classList.toggle("active");
+    });
+  });
+
+  // Get all elements with the class "has-sub-dropdown"
+  const subDropdownItems = document.querySelectorAll(".has-sub-dropdown");
+
+  // Attach a click event listener to each sub-dropdown item
+  subDropdownItems.forEach(item => {
+    item.addEventListener("click", function() {
+      // Toggle the "active" class on the sub-dropdown menu
+      const subDropdownMenu = this.querySelector(".sub-dropdown-menu");
+      subDropdownMenu.classList.toggle("active");
+    });
+  });
+});
+
+let searchButtonId = document.getElementById('searchButton')
+searchButtonId.onclick = () => {
+    let searchMe2Id = document.getElementById('searchMe2')
+    let value = searchMe2Id.value
+    console.log(value);
+    window.location.href = `/product_search_page?search=${value}`;
+}
+
+
+// const selectElement = document.getElementById('locationSelect');
+// selectElement.addEventListener('change', (event) => {
+//   const selectedValue = event.target.value;
+//   window.location.href = `/product_search_page?filteritems=${selectedValue}`;
+// })
+
+  </script> -->

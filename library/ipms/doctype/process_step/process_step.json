@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "autoname": "PS-.#####",
+ "creation": "2023-06-16 16:10:24.079561",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "case_type",
+  "indicator_cb",
+  "indicator",
+  "section_break_4",
+  "property_right",
+  "jurisdiction",
+  "proceedings",
+  "authority",
+  "index",
+  "result_field_required",
+  "column_break_9",
+  "property_right_name",
+  "jurisdiction_name",
+  "proceedings_name",
+  "authority_name",
+  "process_step_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Case Type",
+   "options": "Case Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "indicator_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Orange",
+   "description": "Choose the desired color to display on a List View",
+   "fieldname": "indicator",
+   "fieldtype": "Select",
+   "label": "Indicator",
+   "options": "Blue\nDarkgrey\nGreen\nGrey\nLightblue\nOrange\nPurple\nRed"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "property_right",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Property Right",
+   "options": "Property Right",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "jurisdiction",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Jurisdiction",
+   "options": "Jurisdiction",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "proceedings",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Proceedings",
+   "options": "Proceedings",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "authority",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Authority",
+   "options": "Authority",
+   "reqd": 1
+  },
+  {
+   "fieldname": "index",
+   "fieldtype": "Int",
+   "label": "Index",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Once checked, the field \u201cResult\u201d will get available as a mandatory field within the Case",
+   "fieldname": "result_field_required",
+   "fieldtype": "Check",
+   "label": "Result-field required"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "property_right.property_right_name",
+   "fieldname": "property_right_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Property Right"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "jurisdiction.jurisdiction_name",
+   "fieldname": "jurisdiction_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Jurisdiction"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "proceedings.proceedings_name",
+   "fieldname": "proceedings_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Proceedings"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "authority.authority_name",
+   "fieldname": "authority_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Authority"
+  },
+  {
+   "fieldname": "process_step_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Process Step",
+   "no_copy": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-16 16:10:24.079561",
+ "modified_by": "Administrator",
+ "module": "ipms",
+ "name": "Process Step",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "IPMS Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "process_step_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "process_step_name",
+ "track_changes": 1
+}
