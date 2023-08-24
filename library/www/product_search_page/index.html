@@ -4,52 +4,49 @@
 {% block header %}<h2>{{ _("Product Search") }}</h2>{% endblock %}
 
 {% block page_content %}
-<div id="shop-header" class="shop-page-header"><div class="page-header-image"><a show="/files/page.jpg" href="/shop"><img src="http://167.99.148.15:82/files/page.jpg"></a></div></div>
+<div id="shop-header" class="shop-page-header">
+    <div class="page-header-image">
+        <a show="/files/page.jpg" href="/shop">
+            <img src="http://167.99.148.15:82/files/page.jpg">
+        </a>
+    </div>
+</div>
 <div class="product-search-content">
     <h3 class="search-results">{{ _("Search Results") }}</h3>
-	{% set param1_value = frappe.form_dict.get('search') %}
+    {% set param1_value = frappe.form_dict.get('search') %}
+    <h4>Search Value : <span>{{ param1_value }}</span></h4>
+    
+    <div>
+        {% set selected_country = frappe.form_dict.get('filteritems') %}
+        <p>{{ selected_country }}</p>
+    </div>
 
-	<h4>Search Value : <span>{{ param1_value}}</span></h4>
-
-	
-	<div>
-		{% set selected_country = frappe.form_dict.get('filteritems') %}
-		<p>{{selected_country}}</p>
-	</div>
-		
-<div >
-	{% set items = frappe.db.get_list('Website Item', fields='*') %}
-
-		{% set param1_value = frappe.form_dict.get('search') %}
-		{% for item in items %}
-			
-		{% if param1_value.lower() in item.web_item_name.lower() or param1_value.lower() in item.item_name.lower()   %}
-
-			{% set itemVal = frappe.db.get_list('Item', filters={'name': item.item_code}, fields='standard_rate') %}
-			
-			<a href="/{{item.route}}">
-				<div class="product-card">
-				{% if item.website_image %}
-				<img src="{{item.website_image}}" alt="Product Image" class="product-image">
-				{% else %}
-				<img src="https://vipha.co/wp-content/themes/vipha/images/empty-img.png" alt="Product Image" class="product-image">
-				{% endif %}
-				<div class="product-name">{{item.web_item_name}}</div>
-				<p>{{ itemVal[0].standard_rate }}</p>
-				<button class="add-to-cart">Add to Cart</button>
-				</div>
-			</a>
-
-		{% endif %}
-		
-
-		{% endfor %}
-
-	<div style="text-align: center;">
-		<div class="more-btn"
-			style="display: none; text-align: center;">
-            <button class="btn btn-light">{{ _("More...") }}</button>
-		</div>
-	</div>
+    <div>
+        {% set items = frappe.db.get_list('Website Item', fields='*') %}
+        {% for item in items %}
+            {% if param1_value.lower() in item.web_item_name.lower() or
+                  param1_value.lower() in item.item_name.lower() %}
+                {% set itemVal = frappe.db.get_list('Item', filters={'name': item.item_code}, fields='standard_rate') %}
+                <a href="/{{ item.route }}">
+                    <div class="product-card">
+                        {% if item.website_image %}
+                            <img src="{{ item.website_image }}" alt="Product Image" class="product-image">
+                        {% else %}
+                            <img src="https://vipha.co/wp-content/themes/vipha/images/empty-img.png"
+                                 alt="Product Image" class="product-image">
+                        {% endif %}
+                        <div class="product-name">{{ item.web_item_name }}</div>
+                        <p>{{ itemVal[0].standard_rate }}</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+        <div style="text-align: center;">
+            <div class="more-btn" style="display: none; text-align: center;">
+                <button class="btn btn-light">{{ _("More...") }}</button>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

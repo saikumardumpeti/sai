@@ -11,7 +11,7 @@
     <div class="topbar-search">
         <form class="search-form" >
             <input id="searchMe2" name="search" type="text" placeholder="Search 'Lumber'" class="form-control input-search">
-            <button class="search-button" type="button" id="searchButton"></button>
+            <button class="search-button" type="submit" id="searchButton"></button>
         </form>
     </div>
     <div class="spinner-overlay" style="display: none;">
@@ -124,13 +124,15 @@
   });
 });
 
-let searchButtonId = document.getElementById('searchButton')
-searchButtonId.onclick = () => {
-    let searchMe2Id = document.getElementById('searchMe2')
-    let value = searchMe2Id.value
+let searchButtonId = document.getElementById('searchButton');
+searchButtonId.onclick = (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    let searchMe2Id = document.getElementById('searchMe2');
+    let value = searchMe2Id.value;
     console.log(value);
     window.location.href = `/product_search_page?search=${value}`;
-}
+};
+
 
 
 // const selectElement = document.getElementById('locationSelect');
