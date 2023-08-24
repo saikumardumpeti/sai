@@ -1,4 +1,4 @@
-<!-- <style>
+<style>
     {% include "/public/css/theme_3.css" %}
   </style>
 
@@ -6,7 +6,7 @@
 
 <nav class="topbar">
     <div class="logo">
-      <a href = "/home"><img src="https://biiibo.com/assets/bellamar_website/theme3/images/biiiboOriginalLogoWhite63122257.png" alt="Logo"></a>
+      <a href = "/biibo"><img src="https://kcsdev.frappe.cloud/files/Logo%20Primary.png" alt="Logo"></a>
     </div>
     <div class="topbar-search">
         <form class="search-form" >
@@ -19,14 +19,14 @@
   </div>
     <div class="select-section">
       <select id="locationSelect">
-        <option value="All">All</option>
+        <!-- <option value="All">All</option> -->
           <option value="Seattle">Seattle</option>
           <option value="Toronto">Toronto</option>
           <option value="Vancouver">Vancouver</option>
         </select>
     </div>
     <div class="topbar-login">
-        <a href="/login">
+        <a href="/signup">
             <div class="hello">Hello👋,</div>
                     
         <p class="login" >Login</p>
@@ -38,7 +38,8 @@
         <div class="cart-icon" style="display: inline;">
             <a href="/cart" class="btn_cart_icon" style="padding-right:10px">
             <span style="margin-right: 20px;" class="header-icons-noti badge-wrapper" id="cart-count">1</span>
-            <img src="http://167.99.148.15:82/assets/bellamar_website/images/cart_white.png" class="header-icon1" alt="ICON">
+            <svg class="V3C5bO" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="_1bS9ic" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg>
+            
             </a>
         </div>
     </div>
@@ -90,7 +91,7 @@
     <div class="aaab">
         <div class="abc">
             <p>Get FREE Same Day Deliveries With</p>
-            <img src="https://biiibo.com/assets/bellamar_website/theme3/images/biiiboOriginalLogoWhite63122257.png" class = "nav-item-image"/>
+            <a href="/subscription"><img src="https://w7.pngwing.com/pngs/517/344/png-transparent-adobe-premiere-pro-premiere-pro-multimedia-software-aplication-app-adobe-family-software-icon.png" class = "nav-item-image"/></a>
             <button class="nav-item-pro-title">Learn More</button>
         </div>
     </div>
@@ -138,4 +139,43 @@ searchButtonId.onclick = () => {
 //   window.location.href = `/product_search_page?filteritems=${selectedValue}`;
 // })
 
-  </script> -->
+document.addEventListener("DOMContentLoaded", function() {
+    const selectElement = document.getElementById("locationSelect");
+    const storedValue = localStorage.getItem("selectedLocation");
+
+    if (storedValue) {
+        selectElement.value = storedValue;
+    }
+
+    // Add 'change' event listener to the select element
+    selectElement.addEventListener("change", function(event) {
+        const selectedValue = event.target.value;
+        localStorage.setItem("selectedLocation", selectedValue);
+        
+        // Your additional code here...
+    });
+});
+var loginAnchorId = document.getElementById('loginAnchor');
+var userNameVal = document.getElementById('userName');
+var loginAnchorDropId = document.getElementById('loginAnchorDrop');
+var switchToDeskId = document.getElementById('switchToDesk');
+loginAnchorId.classList.add('d-none');
+var userName = frappe
+
+setTimeout(function() {
+ 
+  if (userName.full_name != 'Guest' ) {
+      if (userName.system_user === 'no') {
+        switchToDeskId.classList.add('d-none')
+      }
+    
+    userNameVal.textContent = userName.full_name
+  }else {
+    loginAnchorDropId.classList.add('d-none')
+    loginAnchorId.classList.remove('d-none');
+  }
+  
+  
+}, 1000);
+
+  </script>

@@ -624,3 +624,59 @@ body {
 .next-button:hover {
   background-color: gray;
 }
+
+
+/* Clear default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flexbox layout for the list container */
+#render {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style for each item */
+.items-li-container {
+  width: calc(33.33% - 20px); /* Adjust as needed for spacing */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  /* Flexbox layout for item content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .items-li-container {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Responsive adjustments for even smaller screens */
+@media (max-width: 480px) {
+  .items-li-container {
+    width: 100%;
+  }
+}
+
+/* Style for product image */
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for product name */
+.product-card {
+  margin-top: 10px;
+}
