@@ -19,8 +19,8 @@ def create_user(full_name, email, role, password, mobile):
         "email": email,
         "first_name": full_name,
         "enabled": 1,
-        "new_password": password ,  # Generate random password if not provided
-        "user_type": "System User",
+        "new_password": password ,  
+        "user_type": "Website User",
         "phone": mobile,
     })
 
@@ -29,7 +29,7 @@ def create_user(full_name, email, role, password, mobile):
     ignore_if_duplicate=True,
     ignore_mandatory=True)
     
-    user.add_roles('Customer')
+    # user.add_roles('Customer')
     
     frappe.db.commit()
     return {"status": role, "message": _("User created successfully")}

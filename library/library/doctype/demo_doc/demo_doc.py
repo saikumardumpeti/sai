@@ -121,3 +121,9 @@ def aa(name):
 def test():
     doc = frappe.get_doc("Project", filters={"customer": ["=", "sai"]})
     print(doc)
+
+
+@frappe.whitelist(allow_guest=True)
+def abc():
+    month_of_subscription = frappe.get_doc("Item", "Paneer12", fields = '*')
+    print(month_of_subscription)

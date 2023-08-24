@@ -1,3 +1,12 @@
 /* .layout-main-section{
     background-color: aqua !important;
 } */
+.for-login .page-card {
+    max-width: 800px !important;
+    background-color: #e5e5e5 !important;
+}
+.email-field {
+    height:100px !important;
+}
+
+

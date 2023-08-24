@@ -1,5 +1,6 @@
 # import frappe
 # from frappe.website.website_generator import WebsiteGenerator
+# from frappe.model.document import Document
 
 # @frappe.whitelist(allow_guest=True)
 # def aa():
@@ -120,6 +121,11 @@
 #     return "Jjbjbdjb"
         
 
-
-
-
+# @frappe.whitelist()
+# def bbb():
+#     doc = frappe.get_list('Website Item', fields='*', filters={'published': 1})
+#     res = []
+#     for item in doc:
+#         item_data = frappe.get_doc('Website Item', item['name'], fields='*')
+#         res.append([item_data.website_image, item_data.route, item_data.item_name])
+#     return res

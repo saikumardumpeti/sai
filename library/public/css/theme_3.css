@@ -49,6 +49,9 @@
 }
 .search-button {
     width: 50px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
     background-color: #2575b9;
     padding: 10px;
     border-bottom-right-radius: 10px;
@@ -108,6 +111,9 @@
     margin-left: 20px;
 }
 .select-section select {
+    position: relative;
+    z-index: 1;
+    padding: 5px;
     font-size: 30px;
     color: #fff;
     appearance: none;
@@ -275,6 +281,10 @@ a {
     width: 35.23px;
     margin-left: 10px;
     margin-top: 10px;
+    mix-blend-mode: color;
+    color: white;
+   
+    filter: brightness(100) invert(1) grayscale(1);
 }
 img {
     max-width: 100%;
@@ -496,10 +506,13 @@ img {
     padding: 10px;
     border-bottom: 1px solid #777;
   }
-  
-  /* / Additional styles / */
-  .dropdown-menu li:last-child,
-  .sub-dropdown-menu li:last-child {
+  .image-container {
+    width: 300px;
+    height: 300px;
+    background-image: url('path-to-transparent-image.png');
+    background-color: white;
+    mix-blend-mode: color; /* Blending mode to change color */
+  }n-menu li:last-child {
     border-bottom: none;
   }
   
@@ -583,4 +596,10 @@ img {
 .abc p {
     font-size: 20px;
     padding-top: 10px;
+}
+.image-container {
+  background-color: white;
+}
+.shopping-cart .cart-icon:hover img {
+  filter: brightness(1.2); /* Adjust the brightness value as needed */
 }

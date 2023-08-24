@@ -1,0 +1,246 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Main container style */
+  .content-section {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  /* Panel group style */
+  .panel-group {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.04);
+    margin-bottom: 0;
+    padding: 30px;
+    font-family: 'Campton', sans-serif;
+    width: 1000px;
+  }
+  
+  /* Panel title style */
+  #accordion .panel-title a {
+    background: #fdc518;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px 12px 50px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+  }
+  
+  #accordion .panel-title a.collapsed {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  
+  #accordion .panel-title a .icon {
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+    color: #fff;
+    font-size: 25px;
+    height: 55px;
+    width: 55px;
+    left: -20px;
+    line-height: 55px;
+    position: absolute;
+    text-align: center;
+    top: -5px;
+    transition: all 0.3s ease 0s;
+  }
+  
+  #accordion .panel-title a.collapsed::after {
+    border: none;
+    box-shadow: none;
+    color: #333;
+  }
+  
+  /* Panel content style */
+  #accordion .panel-body {
+    background: transparent;
+    border-top: medium none;
+    padding: 20px 25px 10px 9px;
+    position: relative;
+  }
+  
+  #accordion .panel-body p {
+    border-left: 1px dashed #8c8c8c;
+    padding-left: 25px;
+  }
+  
+  #accordion .panel-title a:hover {
+    background: #fdc518;
+    position: relative;
+    z-index: 5;
+  }
+  
+  /* Coupon overlay style */
+  .coupon-overlay {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100;
+    transition: width 0.4s ease, height 0.4s ease;
+  }
+  
+  /* Coupon styles */
+  .coupon {
+    margin: 0;
+    padding: 0;
+    color: white;
+    padding: 5px 5px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    background: #ed1b24;
+  }
+  
+  /* Other styles */
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  .section-manual-coupon {
+    text-align: center;
+  }
+  
+  #join-pro-manual-coupon {
+    padding: 5px;
+  }
+  
+  .item_pro_info {
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+  }
+  
+  .item_pro_info_container {
+    width: 200px;
+    float: left;
+  }
+  
+  .item_pro_info_item {
+    position: relative;
+    width: 185px;
+    height: 150px;
+    float: left;
+    margin: 25px;
+  }
+  
+  .item_pro_info_item a {
+    display: block;
+    height: 150px;
+    border: solid 3px #fdc518;
+    border-radius: 10px;
+    background: #fff;
+    text-decoration: none;
+  }
+  
+  .item_pro_info_item a:hover {
+    display: block;
+    background: #fdc518;
+    color: #666;
+  }
+  
+  .item_pro_info_content {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .item_pro_info_title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+  }
+  
+  .item_pro_info_text {
+    font-size: 13px;
+  }
+  
+  .item_pro_save_text {
+    width: 70px;
+    margin: 0 auto;
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  /* Add more styles as needed */
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .item_pro_info_container {
+      width: 100%;
+      float: none;
+    }
+  }
+  .text-small {
+    font-size: 10px;
+  }
+  .buy-now-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107; /* Yellow */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .buy-now-button:hover {
+    background-color: #ff9800; /* Darker yellow on hover */
+  }
+/* Styles for the overlay */
+.page-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-left-color: #fff;
+  animation: spin 1s linear infinite;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  

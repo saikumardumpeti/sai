@@ -15,8 +15,8 @@ app_include_css = "/assets/library/css/library.css"
 app_include_js = "/assets/library/js/library.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/library/css/library.css"
-# web_include_js = "/assets/library/js/library.js"
+web_include_css = "/assets/library/css/library.css"
+web_include_js = "/assets/library/js/library.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "library/public/scss/website"
